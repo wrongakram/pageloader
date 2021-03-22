@@ -1,14 +1,28 @@
-import logo from "./logo.svg";
-import "./App.css";
+import { useEffect, useState } from "react";
+
+import "./sass/main.scss";
+
+// Components
+import Header from "./components/Header";
+import Banner from "./components/Banner";
+import Loader from "./components/Loader";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 6000);
+  }, []);
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>Hello akram</p>
-      </header>
-    </div>
+    <>
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <Header />
+          <Banner />
+        </>
+      )}
+    </>
   );
 }
 

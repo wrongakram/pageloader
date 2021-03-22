@@ -1,0 +1,29 @@
+.banner {
+  .banner-row {
+    display: flex;
+    align-items: center;
+    &.center {
+      justify-content: center;
+      text-align: center;
+    }
+    .row-title {
+      font-size: 31rem;
+      font-weight: 500;
+      position: relative;
+      left: -2.4rem;
+      letter-spacing: -0.8rem;
+    }
+    .row-col {
+      width: 50%;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      .row-message {
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+        width: 320px;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+$move-initial: calc(-25% + 4vw);
+$move-final: calc(-50% + 4vw);
+
+.marquee {
+  position: relative;
+  overflow: hidden;
+  //   --offset: 20vw;
+  //   --move-initial: calc(-25% + var(--offset));
+  //   --move-final: calc(-50% + var(--offset));
+}
+
+.marquee__inner {
+  width: fit-content;
+  display: flex;
+  position: relative;
+  transform: translate3d($move-initial, 0, 0);
+  animation: marquee 5s linear infinite;
+  animation-play-state: paused;
+}
+
+.marquee:hover .marquee__inner {
+  animation-play-state: running;
+}
+
+.marquee span {
+  padding: 0 4vw;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d($move-initial, 0, 0);
+  }
+
+  100% {
+    transform: translate3d($move-final, 0, 0);
+  }
+}

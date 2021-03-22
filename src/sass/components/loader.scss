@@ -1,0 +1,16 @@
+.loader {
+  .loader-inner {
+    .image-block {
+      position: absolute;
+      transform-origin: center;
+      &.center {
+        transform: translate3d(0, 0, 0);
+        display: flex;
+      }
+      img {
+        width: 100%;
+        object-fit: fill;
+      }
+    }
+  }
+}

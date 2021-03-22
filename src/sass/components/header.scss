@@ -1,0 +1,42 @@
+.header {
+  font-size: 1.8rem;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  padding: 0 108px;
+  color: #24242a;
+  .header-inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+      font-weight: 700;
+      font-size: 3.6rem;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      li {
+        list-style: none;
+        margin: 0 40px;
+        a {
+          text-decoration: none;
+          color: #24242a;
+        }
+      }
+    }
+    .contact {
+      a {
+        color: #24242a;
+        text-decoration: none;
+        border-bottom: 2px solid #24242a;
+        padding-bottom: 12px;
+      }
+    }
+  }
+}
