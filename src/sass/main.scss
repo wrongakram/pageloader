@@ -7,3 +7,18 @@
 @import "components/banner";
 @import "components/marquee";
 @import "components/loader";
+
+body {
+  background: #f0eff1;
+}
+
+.img-test {
+  width: 900px;
+  display: flex;
+  &.final {
+    top: -128px;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+  }
+}

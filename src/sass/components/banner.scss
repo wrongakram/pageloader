@@ -1,17 +1,26 @@
 .banner {
+  z-index: 100;
+  position: relative;
   .banner-row {
+    overflow: hidden;
     display: flex;
     align-items: center;
     &.center {
       justify-content: center;
       text-align: center;
+      .row-letter {
+        left: 0;
+      }
     }
-    .row-title {
+    .row-title,
+    .row-letter {
       font-size: 31rem;
       font-weight: 500;
       position: relative;
-      left: -2.4rem;
+      left: -2.5rem;
       letter-spacing: -0.8rem;
+      display: inline-block;
+      white-space: nowrap;
     }
     .row-col {
       width: 50%;
@@ -25,5 +34,33 @@
         width: 320px;
       }
     }
+    .scroll {
+      height: 160px;
+      width: 160px;
+      border-radius: 100%;
+      background: #fff;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      left: 160px;
+      span {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 4px 0;
+      }
+    }
   }
+}
+
+.main-image-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

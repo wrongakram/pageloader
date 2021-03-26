@@ -1,12 +1,16 @@
+body.loading {
+  overflow: hidden;
+  height: 100vh;
+}
+
 .loader {
   .loader-inner {
     .image-block {
       position: absolute;
       transform-origin: center;
-      &.center {
-        transform: translate3d(0, 0, 0);
-        display: flex;
-      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
       img {
         width: 100%;
         object-fit: fill;
