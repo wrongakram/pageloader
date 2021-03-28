@@ -12,12 +12,15 @@
         left: 0;
       }
     }
+    &.right {
+      justify-content: flex-end;
+    }
+
     .row-title,
     .row-letter {
       font-size: 31rem;
       font-weight: 500;
       position: relative;
-      left: -2.5rem;
       letter-spacing: -0.8rem;
       display: inline-block;
       white-space: nowrap;

@@ -30,9 +30,7 @@ function App() {
             {!loading && (
               <motion.img
                 transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
-                src={
-                  "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1950&q=80"
-                }
+                src={process.env.PUBLIC_URL + `/images/image-2.jpg`}
                 className='img-test final'
                 layoutId={"main-image-1"}
               />

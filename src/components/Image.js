@@ -1,7 +1,12 @@
 import React from "react";
 
-const Image = () => {
-  return <div></div>;
+const Image = ({ src, fallback, type = "image/webp" }) => {
+  return (
+    <picture>
+      <source srcSet={src} type={type} />
+      <img src={fallback} />
+    </picture>
+  );
 };
 
 export default Image;

@@ -1,5 +1,5 @@
-$move-initial: calc(0% + 4vw);
-$move-final: calc(-25% + 4vw);
+$move-initial: calc(-25%);
+$move-final: calc(-50%);
 
 .marquee {
   position: relative;
@@ -13,6 +13,11 @@ $move-final: calc(-25% + 4vw);
   transform: translate3d($move-initial, 0, 0);
   animation: marquee 5s linear infinite;
   animation-play-state: paused;
+  @media (min-width: $layout-breakpoint-large) {
+    transform: translate3d(calc(-25% + 10vw), 0, 0);
+    animation: marquee-lg 5s linear infinite;
+    animation-play-state: paused;
+  }
 }
 
 .marquee.animate .marquee__inner {
@@ -20,7 +25,10 @@ $move-final: calc(-25% + 4vw);
 }
 
 .marquee .row-title {
-  padding: 0 4vw;
+  padding: 0 8vw;
+  @media (min-width: $layout-breakpoint-large) {
+    padding: 0 10vw;
+  }
 }
 
 @keyframes marquee {
@@ -30,5 +38,15 @@ $move-final: calc(-25% + 4vw);
 
   100% {
     transform: translate3d($move-final, 0, 0);
+  }
+}
+
+@keyframes marquee-lg {
+  0% {
+    transform: translate3d(calc(-25% + 10vw), 0, 0);
+  }
+
+  100% {
+    transform: translate3d(calc(-50% + 10vw), 0, 0);
   }
 }
