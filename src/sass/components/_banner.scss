@@ -66,4 +66,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  &.final {
+    position: relative;
+    img {
+      top: -48px;
+      position: relative;
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  img {
+    width: 900px;
+    display: flex;
+  }
 }

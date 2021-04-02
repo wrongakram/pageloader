@@ -54,7 +54,6 @@ const Loader = ({ setLoading }) => {
           <motion.img
             variants={item}
             src={process.env.PUBLIC_URL + `/images/image-2.jpg`}
-            className='img-test'
             layoutId={"main-image-1"}
           />
         </div>

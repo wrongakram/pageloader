@@ -4,30 +4,27 @@ $move-final: calc(-50%);
 .marquee {
   position: relative;
   overflow: hidden;
-}
-
-.marquee__inner {
-  width: fit-content;
-  display: flex;
-  position: relative;
-  transform: translate3d($move-initial, 0, 0);
-  animation: marquee 5s linear infinite;
-  animation-play-state: paused;
-  @media (min-width: $layout-breakpoint-large) {
-    transform: translate3d(calc(-25% + 10vw), 0, 0);
-    animation: marquee-lg 5s linear infinite;
-    animation-play-state: paused;
+  &.animate .marquee__inner {
+    animation-play-state: running;
   }
-}
-
-.marquee.animate .marquee__inner {
-  animation-play-state: running;
-}
-
-.marquee .row-title {
-  padding: 0 8vw;
-  @media (min-width: $layout-breakpoint-large) {
-    padding: 0 10vw;
+  .marquee__inner {
+    width: fit-content;
+    display: flex;
+    position: relative;
+    transform: translate3d($move-initial, 0, 0);
+    animation: marquee 5s linear infinite;
+    animation-play-state: paused;
+    @media (min-width: $layout-breakpoint-large) {
+      transform: translate3d(calc(-25% + 10vw), 0, 0);
+      animation: marquee-lg 5s linear infinite;
+      animation-play-state: paused;
+    }
+  }
+  .row-title {
+    padding: 0 8vw;
+    @media (min-width: $layout-breakpoint-large) {
+      padding: 0 10vw;
+    }
   }
 }
 
