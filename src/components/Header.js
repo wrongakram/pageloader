@@ -34,6 +34,10 @@ const Header = () => {
         <div className='contact'>
           <a href='/contact'>Let's work together</a>
         </div>
+        <div className='hamburger-menu'>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </motion.div>
   );

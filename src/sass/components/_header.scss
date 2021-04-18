@@ -4,11 +4,17 @@
   display: flex;
   justify-content: center;
   padding: 0 108px;
-  color: #24242a;
+  color: $black;
   @media (max-width: $layout-breakpoint-medium) {
     padding: 0 72px;
     font-size: 1.6rem;
   }
+  @media (max-width: $layout-breakpoint-xsmall) {
+    padding: 0 12px;
+    height: 96px;
+    font-size: 1.2rem;
+  }
+
   .header-inner {
     width: 100%;
     display: flex;
@@ -19,9 +25,13 @@
       font-size: 3.6rem;
       @media (max-width: $layout-breakpoint-medium) {
         font-size: 3.2rem;
+        flex: 4;
       }
     }
     .nav {
+      @media (max-width: $layout-breakpoint-medium) {
+        display: none;
+      }
       display: flex;
       align-items: center;
       justify-content: center;
@@ -33,17 +43,48 @@
         margin: 0 40px;
         a {
           text-decoration: none;
-          color: #24242a;
+          color: $black;
           white-space: nowrap;
         }
       }
     }
     .contact {
+      @media (max-width: $layout-breakpoint-medium) {
+        flex: 1;
+      }
       a {
-        color: #24242a;
+        color: $black;
         text-decoration: none;
-        border-bottom: 2px solid #24242a;
+        border-bottom: 2px solid $black;
         padding-bottom: 12px;
+        white-space: nowrap;
+        @media (max-width: $layout-breakpoint-xsmall) {
+          border: none;
+        }
+      }
+    }
+    .hamburger-menu {
+      height: 56px;
+      width: 56px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+      cursor: pointer;
+      &:hover {
+        background: darken($color: $white, $amount: 12);
+      }
+      @media (min-width: $layout-breakpoint-medium) {
+        display: none;
+      }
+      span {
+        width: 20px;
+        height: 3px;
+        margin: 2px 0;
+        background: $black;
+        display: block;
       }
     }
   }

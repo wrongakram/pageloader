@@ -28,11 +28,11 @@ function App() {
             <Header />
             <Banner />
             {!loading && (
-              <div className='main-image-parent final'>
+              <div className='transition-image final'>
                 <motion.img
                   transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
                   src={process.env.PUBLIC_URL + `/images/image-2.jpg`}
-                  layoutId={"main-image-1"}
+                  layoutId='main-image-1'
                 />
               </div>
             )}

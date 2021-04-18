@@ -57,7 +57,7 @@ const AnimatedLetters = ({ title, disabled }) => (
 const BannerRowTop = ({ title }) => {
   return (
     <div className={"banner-row"}>
-      <div style={{ width: "50%" }} className='row-col'>
+      <div className='row-col'>
         <AnimatedLetters title={title} />
       </div>
       <motion.div

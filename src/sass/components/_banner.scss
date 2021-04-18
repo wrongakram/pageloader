@@ -5,6 +5,11 @@
     overflow: hidden;
     display: flex;
     align-items: center;
+    @media (max-width: $layout-breakpoint-medium) {
+      &:first-child {
+        margin-top: 48px;
+      }
+    }
     &.center {
       justify-content: center;
       text-align: center;
@@ -15,7 +20,6 @@
     &.right {
       justify-content: flex-end;
     }
-
     .row-title,
     .row-letter {
       font-size: 31rem;
@@ -24,12 +28,30 @@
       letter-spacing: -0.8rem;
       display: inline-block;
       white-space: nowrap;
+      @media (max-width: $layout-breakpoint-medium) {
+        font-size: 28rem;
+      }
+      @media (max-width: $layout-breakpoint-xsmall) {
+        font-size: 13rem;
+      }
     }
     .row-col {
       width: 50%;
       display: flex;
       align-content: center;
       justify-content: center;
+      @media (max-width: $layout-breakpoint-medium) {
+        width: 70%;
+      }
+      @media (max-width: 1240px) {
+        &:last-child {
+          display: none;
+        }
+      }
+      @media (max-width: $layout-breakpoint-xsmall) {
+        width: 100%;
+        justify-content: flex-start;
+      }
       .row-message {
         font-weight: 500;
         font-size: 1.8rem;
@@ -41,23 +63,33 @@
       height: 160px;
       width: 160px;
       border-radius: 100%;
-      background: #fff;
+      background: $white;
       position: absolute;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
       left: 160px;
+      @media (max-width: $layout-breakpoint-medium) {
+        left: 60px;
+      }
+      @media (max-width: 1240px) {
+        display: none;
+      }
       span {
         font-size: 18px;
         font-weight: 600;
         margin: 4px 0;
+        @media (max-width: $layout-breakpoint-xsmall) {
+          font-size: 10px;
+          margin: 2px 0;
+        }
       }
     }
   }
 }
 
-.main-image-parent {
+.transition-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -66,17 +98,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  &.final {
-    position: relative;
-    img {
-      top: -48px;
-      position: relative;
-      width: 90%;
-      margin: 0 auto;
-    }
-  }
   img {
-    width: 900px;
+    max-width: 900px;
+    width: 60%;
     display: flex;
+  }
+  &.final {
+    display: block;
+    top: -128px;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    z-index: -100;
+    @media (max-width: $layout-breakpoint-xsmall) {
+      top: -56px;
+    }
+    img {
+      width: 100%;
+      max-width: 100%;
+    }
   }
 }

@@ -1,13 +1,9 @@
+@import "abstracts/variables";
+@import "base/global";
 @import "base/reset";
 @import "base/typography";
-
-@import "abstracts/variables";
 
 @import "components/header";
 @import "components/banner";
 @import "components/marquee";
 @import "components/loader";
-
-body {
-  background: #f0eff1;
-}

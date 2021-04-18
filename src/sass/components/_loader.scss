@@ -11,6 +11,46 @@ body.loading {
       display: flex;
       align-items: center;
       justify-content: center;
+      &.image-1 {
+        max-width: 500px;
+        width: 40%;
+        left: 16%;
+        bottom: 14%;
+        @media (max-width: $layout-breakpoint-xsmall) {
+          left: 4%;
+          bottom: 28%;
+        }
+      }
+      &.image-3 {
+        max-width: 500px;
+        width: 32%;
+        right: 10%;
+        top: 8%;
+        @media (max-width: $layout-breakpoint-xsmall) {
+          top: 16%;
+          right: 4%;
+        }
+      }
+      &.image-4 {
+        max-width: 500px;
+        width: 40%;
+        right: 20%;
+        bottom: 10%;
+        @media (max-width: $layout-breakpoint-xsmall) {
+          right: 6%;
+          bottom: 32%;
+        }
+      }
+      &.image-5 {
+        max-width: 400px;
+        width: 32%;
+        left: 14%;
+        top: 12%;
+        @media (max-width: $layout-breakpoint-xsmall) {
+          left: 6%;
+          top: 18%;
+        }
+      }
       img {
         width: 100%;
         object-fit: fill;

@@ -33,6 +33,18 @@ const item = {
   },
 };
 
+const itemMain = {
+  hidden: { opacity: 0, y: 200 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 1.6,
+    },
+  },
+};
+
 const Loader = ({ setLoading }) => {
   return (
     <motion.div className='loader'>
@@ -43,53 +55,27 @@ const Loader = ({ setLoading }) => {
         animate='show'
         exit='exit'
         className='loader-inner'>
-        <ImageBlock
-          variants={item}
-          width='500'
-          posX='15'
-          posY='62'
-          id='image-1'
-        />
-        <div className='main-image-parent'>
+        <ImageBlock variants={item} id='image-1' />
+        <motion.div variants={itemMain} className='transition-image'>
           <motion.img
-            variants={item}
+            layoutId='main-image-1'
             src={process.env.PUBLIC_URL + `/images/image-2.jpg`}
-            layoutId={"main-image-1"}
           />
-        </div>
-        <ImageBlock
-          variants={item}
-          width='500'
-          posX='70'
-          posY='10'
-          id='image-3'
-        />
-        <ImageBlock
-          variants={item}
-          width='500'
-          posX='60'
-          posY='70'
-          id='image-4'
-        />
-        <ImageBlock
-          variants={item}
-          width='400'
-          posX='12'
-          posY='12'
-          id='image-5'
-        />
+        </motion.div>
+        <ImageBlock variants={item} id='image-3' />
+        <ImageBlock variants={item} id='image-4' />
+        <ImageBlock variants={item} id='image-5' />
       </motion.div>
     </motion.div>
   );
 };
 
-export const ImageBlock = ({ width, posX, posY, variants, id }) => {
+export const ImageBlock = ({ posX, posY, variants, id }) => {
   return (
     <motion.div
       variants={variants}
-      className={`image-block`}
+      className={`image-block ${id}`}
       style={{
-        width: `${width}px`,
         top: `${posY}vh`,
         left: `${posX}vw `,
       }}>
