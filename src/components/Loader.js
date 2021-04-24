@@ -47,24 +47,25 @@ const itemMain = {
 
 const Loader = ({ setLoading }) => {
   return (
-    <motion.div className='loader'>
+    <motion.div className="loader">
       <motion.div
         variants={container}
         onAnimationComplete={() => setLoading(false)}
-        initial='hidden'
-        animate='show'
-        exit='exit'
-        className='loader-inner'>
-        <ImageBlock variants={item} id='image-1' />
-        <motion.div variants={itemMain} className='transition-image'>
+        initial="hidden"
+        animate="show"
+        exit="exit"
+        className="loader-inner"
+      >
+        <ImageBlock variants={item} id="image-1" />
+        <motion.div variants={itemMain} className="transition-image">
           <motion.img
-            layoutId='main-image-1'
+            layoutId="main-image-1"
             src={process.env.PUBLIC_URL + `/images/image-2.jpg`}
           />
         </motion.div>
-        <ImageBlock variants={item} id='image-3' />
-        <ImageBlock variants={item} id='image-4' />
-        <ImageBlock variants={item} id='image-5' />
+        <ImageBlock variants={item} id="image-3" />
+        <ImageBlock variants={item} id="image-4" />
+        <ImageBlock variants={item} id="image-5" />
       </motion.div>
     </motion.div>
   );
@@ -78,11 +79,12 @@ export const ImageBlock = ({ posX, posY, variants, id }) => {
       style={{
         top: `${posY}vh`,
         left: `${posX}vw `,
-      }}>
+      }}
+    >
       <Image
         src={process.env.PUBLIC_URL + `/images/${id}.webp`}
         fallback={process.env.PUBLIC_URL + `/images/${id}.jpg`}
-        alt='A photo showing the expiration date on a box of Lucky Charms'
+        alt={id}
       />
     </motion.div>
   );

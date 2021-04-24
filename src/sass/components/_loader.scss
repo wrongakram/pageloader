@@ -12,8 +12,7 @@ body.loading {
       align-items: center;
       justify-content: center;
       &.image-1 {
-        max-width: 500px;
-        width: 40%;
+        width: 400px;
         left: 16%;
         bottom: 14%;
         @media (max-width: $layout-breakpoint-xsmall) {
@@ -22,9 +21,8 @@ body.loading {
         }
       }
       &.image-3 {
-        max-width: 500px;
-        width: 32%;
-        right: 10%;
+        width: 300px;
+        right: 12%;
         top: 8%;
         @media (max-width: $layout-breakpoint-xsmall) {
           top: 16%;
@@ -32,7 +30,7 @@ body.loading {
         }
       }
       &.image-4 {
-        max-width: 500px;
+        max-width: 400px;
         width: 40%;
         right: 20%;
         bottom: 10%;
@@ -42,8 +40,7 @@ body.loading {
         }
       }
       &.image-5 {
-        max-width: 400px;
-        width: 32%;
+        width: 280px;
         left: 14%;
         top: 12%;
         @media (max-width: $layout-breakpoint-xsmall) {
