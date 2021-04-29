@@ -8,6 +8,7 @@ const Loader = ({ setLoading }) => {
     }, 4000);
     return () => clearTimeout(timer);
   });
+
   return (
     <div className='loader'>
       <div className='loader-inner'>
@@ -26,9 +27,9 @@ const Loader = ({ setLoading }) => {
   );
 };
 
-export const ImageBlock = ({ variants, id }) => {
+export const ImageBlock = ({ id }) => {
   return (
-    <div variants={variants} className={`image-block ${id}`}>
+    <div className={`image-block ${id}`}>
       <Image
         src={process.env.PUBLIC_URL + `/images/${id}.webp`}
         fallback={process.env.PUBLIC_URL + `/images/${id}.jpg`}
