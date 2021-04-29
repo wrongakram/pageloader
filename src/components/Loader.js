@@ -9,33 +9,26 @@ const Loader = ({ setLoading }) => {
     return () => clearTimeout(timer);
   });
   return (
-    <div className="loader">
-      <div className="loader-inner">
-        <ImageBlock id="image-1" />
-        <div className="transition-image">
+    <div className='loader'>
+      <div className='loader-inner'>
+        <ImageBlock id='image-1' />
+        <div className='transition-image'>
           <img
             src={process.env.PUBLIC_URL + `/images/image-2.jpg`}
-            alt="random alt"
+            alt='random alt'
           />
         </div>
-        <ImageBlock id="image-3" />
-        <ImageBlock id="image-4" />
-        <ImageBlock id="image-5" />
+        <ImageBlock id='image-3' />
+        <ImageBlock id='image-4' />
+        <ImageBlock id='image-5' />
       </div>
     </div>
   );
 };
 
-export const ImageBlock = ({ posX, posY, variants, id }) => {
+export const ImageBlock = ({ variants, id }) => {
   return (
-    <div
-      variants={variants}
-      className={`image-block ${id}`}
-      style={{
-        top: `${posY}vh`,
-        left: `${posX}vw `,
-      }}
-    >
+    <div variants={variants} className={`image-block ${id}`}>
       <Image
         src={process.env.PUBLIC_URL + `/images/${id}.webp`}
         fallback={process.env.PUBLIC_URL + `/images/${id}.jpg`}
