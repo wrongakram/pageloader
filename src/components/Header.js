@@ -1,8 +1,14 @@
-import React from "react";
+import React from 'react'
+import { motion } from 'framer-motion'
 
 const Header = () => {
   return (
-    <div className="header">
+    <motion.div
+      className="header"
+      initial={{ opacity: 0, y: -180 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ ease: 'easeInOut', duration: 1, delay: 0.6 }}
+    >
       <div className="header-inner">
         <div className="logo">Ollie</div>
         <nav className="nav">
@@ -30,8 +36,8 @@ const Header = () => {
           <span></span>
         </div>
       </div>
-    </div>
-  );
-};
+    </motion.div>
+  )
+}
 
-export default Header;
+export default Header
